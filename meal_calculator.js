@@ -12,8 +12,8 @@ function Diner(name, meal) {
 	this.meal = meal
 }
 
-function bill(diners, tax_rate, tip_ratio) {
-	var cost = 0
+function print_bill(diners, tax_rate, tip_ratio) {
+	var cost = 0  
 	for(i in diners) {
 		var diner = diners[i]
 		for(j in diner.meal) {
@@ -61,9 +61,9 @@ var menu = {
 
 var diners = [
 	new Diner("wieger", [menu.fish, menu.white_wine, menu.beer]),
-	new Diner("gijs", [menu.beef, menu.beer, menu.beer]),
+	new Diner("gijs",   [menu.beef, menu.beer, menu.beer]),
 	new Diner("shayla", [menu.pork, menu.white_wine, menu.white_wine])
 ];
 
 console.log()
-bill(diners, 0.21, 0.1)
+print_bill(diners, 0.21, 0.1)
